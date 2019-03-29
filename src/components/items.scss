@@ -1,0 +1,43 @@
+.item-wrapper {
+  margin-right: 42px;
+  .item {
+    display: flex;
+    line-height: 24px;
+    padding: 10px 10px;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    cursor: pointer;
+    position: relative;
+
+    .file-name,
+    .folder-name {
+      padding-top: 5px;
+      font-family: Lato-Regular;
+      font-size: 16px;
+      color: #535b62;
+      letter-spacing: 0;
+    }
+
+    .folder-image,
+    .folder-name {
+      padding-top: 10px;
+    }
+
+    .extention {
+      position: absolute;
+      font-size: 14px;
+      color: #ffffff;
+      letter-spacing: 0;
+      top: 57px;
+      left: 30px;
+    }
+    :hover {
+      background-color: unset;
+    }
+  }
+  :hover {
+    background: #e6f5ff;
+    border-radius: 8px;
+  }
+}

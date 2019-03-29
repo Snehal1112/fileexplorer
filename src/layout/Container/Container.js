@@ -2,12 +2,14 @@ import React, { Component } from "react";
 import NavigationBar from "./NavigationBar";
 import { connect } from "react-redux";
 import "./Container.scss";
+import FileExplorer from "./FileExplorer";
 class Container extends Component {
   render() {
-    console.log("container:-", this.props);
+    const { selectedPath } = this.props;
     return (
       <div id="container">
-        <NavigationBar />
+        <NavigationBar path={selectedPath} />
+        <FileExplorer />
       </div>
     );
   }

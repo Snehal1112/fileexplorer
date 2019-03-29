@@ -15,7 +15,6 @@ class NavItem extends PureComponent {
 
   render() {
     const { folders: menu } = this.props;
-    console.log(this.props);
     const hasSubFolders = item => {
       if (item.hasSubmenu) {
         return item.submenu.some(sub => {

@@ -1,6 +1,5 @@
 import React, { PureComponent } from "react";
 import { connect } from "react-redux";
-import NavHeader from "./NavHeader";
 import NavItem from "./NavItem";
 import { getFoldersList } from "../../actions/ListFoldersAction";
 
@@ -12,10 +11,11 @@ class NavigationSideBar extends PureComponent {
   }
 
   render() {
-    const { folders } = this.props;
     return (
       <nav id="sidebar">
-        <NavHeader />
+        <div className="sidebar-header">
+          <span>Root</span>
+        </div>
         <NavItem {...this.props} />
       </nav>
     );
