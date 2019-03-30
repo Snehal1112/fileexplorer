@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 import { connect } from "react-redux";
 import NavItem from "./NavItem";
 import { getFoldersList } from "../../actions/ListFoldersAction";
+import { selectFolder } from "../../actions/FolderAction";
 
 import "./NavigationSideBar.scss";
 
@@ -32,5 +33,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getFoldersList }
+  { getFoldersList, selectFolder }
 )(NavigationSideBar);

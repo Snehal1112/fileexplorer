@@ -12,10 +12,9 @@
     color: #afb2b6;
   }
 
-  a[data-toggle="collapse"] {
-    position: relative;
+  .active {
+    background: #eeeff1;
   }
-
   .dropdown-toggle {
     overflow: hidden;
     transition: 0.5s all;
@@ -52,10 +51,7 @@
       div:hover {
         background: #eeeff1;
       }
-      .active > div,
-      div[aria-expanded="true"] {
-        background: #eeeff1;
-      }
+
       ul {
         li {
           div {

@@ -6,14 +6,12 @@ export const getFoldersList = () => dispatch => {
     type: LIST_FOLDERS,
     payload: [
       {
-        id:1,
         hasSubmenu: false,
         title: "apps",
         type: constants.FOLDER,
         path: "root"
       },
       {
-        id: 2,
         hasSubmenu: false,
         title: "pictures",
         type: constants.FOLDER,

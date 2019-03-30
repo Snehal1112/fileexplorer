@@ -2,13 +2,16 @@ import React, { Component, Fragment } from "react";
 import logo from "../../images/arrow-green-circle.png";
 import Icon from "../../utils/icons";
 
-export default class NavigationBar extends Component {
+class NavigationBar extends Component {
+  onClickUpArrow = () => {
+    console.log(this.props);
+  };
   render() {
     const { path = "root" } = this.props;
     return (
       <nav className="navbar">
         <div className="left-navitems">
-          <img src={logo} alt="uparrowe" />
+          <img src={logo} alt="uparrowe" onClick={this.onClickUpArrow} />
           <div className="navPath">
             {path !== "root" ? (
               <Fragment>
@@ -37,3 +40,4 @@ export default class NavigationBar extends Component {
     );
   }
 }
+export default NavigationBar;

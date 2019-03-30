@@ -1,16 +1,23 @@
 import React, { PureComponent } from "react";
 import Icon from "../../utils/icons";
 import { constants } from "../../constants";
+
 class NavItem extends PureComponent {
   onClickMenu(hasSubmenu, event) {
+    const target = event.currentTarget;
     if (hasSubmenu) {
-      const target = event.currentTarget;
       const el = target.parentElement.querySelector("ul");
       if (el) {
         el.classList.toggle("closed");
       }
     }
-    this.props.onSelectedItem(event.currentTarget.dataset.id);
+    const el = document.querySelector(".active");
+    if (el) {
+      el.classList.remove("active");
+    }
+
+    target.classList.add("active");
+    this.props.selectFolder(target.dataset.id);
   }
 
   render() {
@@ -31,8 +38,8 @@ class NavItem extends PureComponent {
     // Recursive function call to generate the Side navigation bar.
     const createMenu = (menu, isSubMenu) => {
       return (
-        <ul className={isSubMenu ? "dropdown-toggle" : ""}>
-          {menu.map((item, index) => {
+        <ul className={isSubMenu ? "dropdown-toggle" : "root"}>
+          {menu.map(item => {
             const hasSubFolder = hasSubFolders(item);
             // Create li only for the folder items.
             return item.type === constants.FOLDER ? (

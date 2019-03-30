@@ -2,8 +2,8 @@
   margin-right: 42px;
   .item {
     display: flex;
-    line-height: 24px;
-    padding: 10px 10px;
+    width: 75px;
+    padding: 10px;
     justify-content: center;
     align-items: center;
     flex-flow: column;
@@ -22,6 +22,10 @@
     .folder-image,
     .folder-name {
       padding-top: 10px;
+    }
+
+    .create-item-img {
+      width: 75px;
     }
 
     .extention {

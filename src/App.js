@@ -6,23 +6,11 @@ import { store } from "./store";
 
 import "./App.scss";
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedPath: undefined
-    };
-    this.onSelectItem = this.onSelectItem.bind(this);
-  }
-
-  onSelectItem(selectedPath) {
-    this.setState({ selectedPath });
-  }
-  
   render() {
     return (
       <Provider store={store}>
         <div className="wrapper">
-          <NavigationSideBar onSelectedItem={this.onSelectItem} />
+          <NavigationSideBar />
           <Container {...this.state} />
         </div>
       </Provider>
