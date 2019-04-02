@@ -1,17 +1,18 @@
-import { SELECT_FOLDER } from "../actions/action";
+import { SELECT_FOLDER } from '../actions/action';
 
 const initState = {
-  selected: undefined
+	selected: undefined
 };
 
 export default (state = initState, action) => {
-  switch (action.type) {
-    case SELECT_FOLDER:
-      return {
-        ...state,
-        selected: action.payload
-      };
-    default:
-      return state;
-  }
+	switch (action.type) {
+		case SELECT_FOLDER:
+			return {
+				...state,
+				selected: action.payload
+			};
+
+		default:
+			return state;
+	}
 };

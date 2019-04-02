@@ -3,8 +3,14 @@ import logo from '../../images/arrow-green-circle.png';
 import Icon from '../../utils/icons';
 
 class NavigationBar extends Component {
+	/**
+	 * Event handler which called when up arrow icon 
+	 * was clicked. function is used to navigate to 
+	 * parent directory.
+	 */
 	onClickUpArrow = () => {
-		let path = this.props.folderPath.split('/');
+		const { folderPath } = this.props;
+		let path = folderPath.split('/');
 		if (path.length === 1) {
 			return;
 		}
