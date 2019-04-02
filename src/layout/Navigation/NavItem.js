@@ -39,7 +39,7 @@ class NavItem extends Component {
 		};
 
 		// Recursive function call to generate the Side navigation bar.
-		const createMenu = (menu, isSubMenu) => {
+		const createMenu = (menu, isSubMenu = false, depth = 0) => {
 			return (
 				<ul className={isSubMenu ? 'dropdown-toggle' : 'root'}>
 					{menu.map((item) => {
@@ -51,13 +51,14 @@ class NavItem extends Component {
 								<div
 									data-id={`${item.path}/${item.title}`}
 									onClick={this.onClickMenu.bind(this, item.hasSubmenu)}
+									style={{ paddingLeft: depth === 0 ? 32 : 32 * depth }}
 									className={`${item.path}/${item.title}` === folderPath ? 'active' : undefined}
 								>
 									<span>{item.title}</span>
 									{// Show icon if menu item has sub folder(s).
 									hasSubFolder ? <Icon icon="downarrow" width={25} /> : ''}
 								</div>
-								{hasSubFolder ? createMenu(item.submenu, item.hasSubmenu) : ''}
+								{hasSubFolder ? createMenu(item.submenu, item.hasSubmenu, ++depth, 'sneha') : ''}
 							</li>
 						) : (
 							''

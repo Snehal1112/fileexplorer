@@ -1,3 +1,21 @@
-td {
-  vertical-align: unset;
+.icon {
+	margin-top: 32px;
+	padding: 10px;
+	margin-bottom: 25px;
+}
+.label {
+	color: #2f363f;
+	text-align: right;
+}
+.value {
+	color: #81878c;
+	padding-left: 10px;
+	text-align: left;
+}
+
+tr {
+	height: 40px;
+	td {
+		vertical-align: unset;
+	}
 }

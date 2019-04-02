@@ -1,0 +1,32 @@
+.dialog {
+	background: #fff;
+	border: 1px solid rgba(221, 224, 228, 0.70);
+	box-shadow: 0px 16px 64px 0px rgba(0, 0, 0, 0.08);
+	border-radius: 8px;
+	width: 316px;
+	height: 395px;
+	position: absolute;
+	left: 50%;
+	margin: auto;
+	margin-left: -158px;
+	top: 50%;
+	margin-top: -197px;
+	text-align: center;
+	padding: 25px;
+	font-size: 16px;
+	flex-flow: column;
+	display: flex;
+	align-items: center;
+
+	.title {
+		font-size: 18px;
+		color: #2f363f;
+	}
+
+	.closeIcon {
+		position: absolute;
+		right: 0;
+		opacity: 0.5;
+		cursor: pointer;
+	}
+}
