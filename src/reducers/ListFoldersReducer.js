@@ -12,7 +12,6 @@ export default (state = initState, action) => {
         items: action.payload
       };
     case DELETE_FOLDER:
-      console.log(action);
       return {
         ...state,
         items: [...action.payload]

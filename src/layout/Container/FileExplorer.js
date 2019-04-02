@@ -28,6 +28,7 @@ class FileExplorer extends Component {
     this.onClickGetInfo = this.onClickGetInfo.bind(this);
     this.onClickDelete = this.onClickDelete.bind(this);
     this.closeHandler = this.closeHandler.bind(this);
+    this.showCreateItemDialog = this.showCreateItemDialog.bind(this);
     this.onCreateItem = this.onCreateItem.bind(this);
   }
 
@@ -69,7 +70,21 @@ class FileExplorer extends Component {
     }
   }
 
-  onCreateItem(event) {
+  onCreateItem(item) {
+    this.props.addItem(item);
+    this.setState({
+      showContextMenu: false,
+      showDialog: false,
+      showInfoDialog: false,
+      showCreateDialog: false
+    });
+  }
+
+  /**
+   *
+   * @param {*} event
+   */
+  showCreateItemDialog(event) {
     if (event.buttons === 2) {
       event.preventDefault();
       return;
@@ -167,7 +182,7 @@ class FileExplorer extends Component {
             type: constants.CREATE_NEW,
             path: "root"
           }}
-          clickHandler={this.onCreateItem}
+          clickHandler={this.showCreateItemDialog}
         />
         {this.state.showContextMenu && (
           <ContextMenu
@@ -195,7 +210,8 @@ class FileExplorer extends Component {
             )}
             {this.state.showCreateDialog && (
               <CreateItemDialog
-                {...this.state.selectedItem}
+                path={this.props.folderPath}
+                handlerSubmit={this.onCreateItem}
                 closeHandler={this.closeHandler}
               />
             )}

@@ -40,7 +40,6 @@ class NavItem extends Component {
 
     // Recursive function call to generate the Side navigation bar.
     const createMenu = (menu, isSubMenu = false, depth = 0) => {
-      console.log("menu:-", menu[0].title);
       return (
         <ul className={isSubMenu ? "dropdown-toggle" : "root"}>
           {menu.map(item => {

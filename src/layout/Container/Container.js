@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { moveUp, selectFolder, deleteItem } from "../../actions/FolderAction";
+import {
+  moveUp,
+  selectFolder,
+  deleteItem,
+  addItem
+} from "../../actions/FolderAction";
 import { constants } from "../../constants";
 import "./Container.scss";
 import FileExplorer from "./FileExplorer";
@@ -28,5 +33,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { selectFolder, moveUp, deleteItem }
+  { selectFolder, moveUp, deleteItem, addItem }
 )(Container);
