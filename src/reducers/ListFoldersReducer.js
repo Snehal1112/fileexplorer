@@ -1,4 +1,4 @@
-import { LIST_FOLDERS } from "../actions/action";
+import { LIST_FOLDERS, DELETE_FOLDER } from "../actions/action";
 
 const initState = {
   items: []
@@ -10,6 +10,12 @@ export default (state = initState, action) => {
       return {
         ...state,
         items: action.payload
+      };
+    case DELETE_FOLDER:
+      console.log(action);
+      return {
+        ...state,
+        items: [...action.payload]
       };
     default:
       return state;

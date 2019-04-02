@@ -12,7 +12,7 @@ export const getFoldersList = () => dispatch => {
         path: "root",
         size: "500kb",
         created_by: "Amit",
-        created_date: new Date()
+        created_date: new Date().getTime()
       },
       {
         hasSubmenu: false,
@@ -21,7 +21,7 @@ export const getFoldersList = () => dispatch => {
         path: "root",
         size: "600kb",
         created_by: "Rahul",
-        created_date: new Date()
+        created_date: new Date().getTime()
       },
       {
         hasSubmenu: false,
@@ -30,7 +30,7 @@ export const getFoldersList = () => dispatch => {
         path: "root",
         size: "200kb",
         created_by: "Snehal",
-        created_date: new Date()
+        created_date: new Date().getTime()
       },
       {
         hasSubmenu: true,
@@ -39,7 +39,7 @@ export const getFoldersList = () => dispatch => {
         path: "root",
         size: "600kb",
         created_by: "Snehal",
-        created_date: new Date(),
+        created_date: new Date().getTime(),
         submenu: [
           {
             hasSubmenu: true,
@@ -48,7 +48,7 @@ export const getFoldersList = () => dispatch => {
             path: "root/docs",
             size: "600kb",
             created_by: "Dhara",
-            created_date: new Date(),
+            created_date: new Date().getTime(),
             submenu: [
               {
                 hasSubmenu: false,
@@ -57,7 +57,7 @@ export const getFoldersList = () => dispatch => {
                 title: "e.pdf",
                 size: "200kb",
                 created_by: "snehal",
-                created_date: new Date()
+                created_date: new Date().getTime()
               },
               {
                 hasSubmenu: false,
@@ -66,7 +66,7 @@ export const getFoldersList = () => dispatch => {
                 title: "f.ts",
                 size: "200kb",
                 created_by: "snehal",
-                created_date: new Date()
+                created_date: new Date().getTime()
               },
               {
                 hasSubmenu: false,
@@ -75,7 +75,7 @@ export const getFoldersList = () => dispatch => {
                 type: constants.FOLDER,
                 size: "200kb",
                 created_by: "snehal",
-                created_date: new Date()
+                created_date: new Date().getTime()
               }
             ]
           },
@@ -86,7 +86,7 @@ export const getFoldersList = () => dispatch => {
             title: "c.pdf",
             size: "200kb",
             created_by: "snehal",
-            created_date: new Date()
+            created_date: new Date().getTime()
           },
           {
             hasSubmenu: false,
@@ -95,7 +95,7 @@ export const getFoldersList = () => dispatch => {
             title: "d.docx",
             size: "200kb",
             created_by: "snehal",
-            created_date: new Date()
+            created_date: new Date().getTime()
           }
         ]
       },
@@ -106,7 +106,7 @@ export const getFoldersList = () => dispatch => {
         path: "root",
         size: "500kb",
         created_by: "admin",
-        created_date: new Date()
+        created_date: new Date().getTime()
       },
       {
         hasSubmenu: false,
@@ -115,7 +115,7 @@ export const getFoldersList = () => dispatch => {
         path: "root",
         size: "500kb",
         created_by: "pravinbhai",
-        created_date: new Date()
+        created_date: new Date().getTime()
       }
     ]
   });

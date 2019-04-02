@@ -1,48 +1,51 @@
 .type {
-	margin-top: 16px;
-	border: 1px solid #dde0e4;
-	border-radius: 8px;
-	display: flex;
-	.file,
-	.folder {
-		width: 65px;
-		padding: 10px 10px;
-		cursor: pointer;
-		color: #535b62;
-	}
-	.file-active {
-		background-color: #4ab7ff;
-		color: #ffffff;
-		border-radius: 8px 0px 0px 8px;
-	}
-	.folder-active {
-		background-color: #4ab7ff;
-		color: #ffffff;
-		border-radius: 0px 8px 8px 0px;
-	}
+  margin-top: 16px;
+  border: 1px solid #dde0e4;
+  border-radius: 8px;
+  display: flex;
+  .file,
+  .folder {
+    width: 65px;
+    padding: 10px 10px;
+    cursor: pointer;
+    color: #535b62;
+  }
+  .file-active {
+    background-color: #4ab7ff;
+    color: #ffffff;
+    border-radius: 8px 0px 0px 8px;
+  }
+  .folder-active {
+    background-color: #4ab7ff;
+    color: #ffffff;
+    border-radius: 0px 8px 8px 0px;
+  }
 }
 .form-field-wraper {
-	margin-top: 32px;
-	input {
-		height: 16px;
-		border: 1px solid #dde0e4;
-		border-radius: 8px;
-		font-size: 14px;
-		color: #2f363f;
-		margin-bottom: 16px;
-		padding: 11px 16px;
-		width: 180px;
-	}
-	::placeholder {
-		color: #afb2b6;
-	}
-	button {
-		background: #4ab7ff;
-		border-radius: 8px;
-		font-size: 14px;
-		color: #ffffff;
-		width: 214px;
-		border-radius: 8px;
-		padding: 11px 16px;
-	}
+  margin-top: 32px;
+  input {
+    height: 16px;
+    border: 1px solid #dde0e4;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #2f363f;
+    margin-bottom: 16px;
+    padding: 11px 16px;
+    width: 180px;
+    outline: none;
+  }
+  ::placeholder {
+    color: #afb2b6;
+  }
+  button {
+    background: #4ab7ff;
+    outline: none;
+    font-size: 14px;
+    color: #ffffff;
+    width: 214px;
+    border-radius: 8px;
+    padding: 11px 16px;
+    cursor: pointer;
+    border: none;
+  }
 }
